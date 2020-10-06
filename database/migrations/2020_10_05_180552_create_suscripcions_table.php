@@ -21,7 +21,6 @@ class CreateSuscripcionsTable extends Migration
             $table->unsignedFloat('precio');
             $table->date('fecha_vencimiento');
             $table->string('tipo')->default(SuscripcionType::Cancelado);
-            $table->foreignId('producto_id')->references('codigo_producto')->on('productos')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -19,10 +19,7 @@ class Suscripcion extends Model
     // Relaciones
 
     public function user() {
-        return $this->belongsTo(User::class);
+        return $this->hasMany(User::class);
     }
-    
-    public function producto() {
-        return $this->belongsTo(Producto::class);
-    }
+
 }

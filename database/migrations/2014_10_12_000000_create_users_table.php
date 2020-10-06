@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->foreignId('suscripcion_id')->references('id')->on('suscripcions')->onDelete('cascade');
             $table->timestamps();
         });
     }

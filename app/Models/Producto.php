@@ -27,11 +27,7 @@ class Producto extends Model
     }
 
     public function imagens() {
-        return $this->hasMany(Product::class);
-    }
-
-    public function suscripcion() {
-        return $this->hasOne(Suscripcion::class);
+        return $this->hasMany(Imagen::class);
     }
 
 }

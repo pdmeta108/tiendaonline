@@ -43,10 +43,6 @@ class User extends Authenticatable
 
     /*Relaciones*/
 
-    public function tarjetas() {
-        return $this->hasMany(Tarjeta::class);
-    }
-
     public function productos() {
         return $this->hasMany(Producto::class);
     }
@@ -54,4 +50,9 @@ class User extends Authenticatable
     public function empresa() {
         return $this->hasOne(Empresa::class);
     }
+
+    public function suscripcion() {
+        return $this->belongsTo(Suscripcion::class);
+    }
+    
 }
